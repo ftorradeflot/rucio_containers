@@ -21,7 +21,7 @@
 # - Mayank Sharma <mayank.sharma@cern.ch>, 2021
 
 FROM centos:7
-ENV RUCIO_TAG=1.26.9
+ENV RUCIO_TAG=1.26.18
 
 WORKDIR /
 
