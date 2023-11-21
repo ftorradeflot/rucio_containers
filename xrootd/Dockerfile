@@ -1,9 +1,12 @@
 FROM centos:7
 
+# Add PIC repository to enable old XrootD versions
+ADD UMD-4-updates-el7-x86_64.repo /etc/yum.repos.d/UMD-4-updates-el7-x86_64.repo
+
 # Install XrootD
 RUN yum install -y epel-release.noarch
 RUN yum upgrade -y
-RUN yum install -y xrootd xrootd-client
+RUN yum install -y xrootd-5.6.3 xrootd-client-5.6.3
 RUN yum clean all
 
 # Install the Rucio CA

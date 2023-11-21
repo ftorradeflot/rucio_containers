@@ -1,0 +1,6 @@
+[UMD-4-updates-el7-x86_64]
+name=UMD 4 updates for EL7
+baseurl=http://install02.pic.es/repositorios/UMD-4-updates-el7-x86_64/RPMS.base/
+enabled=1
+gpgcheck=0
+exclude=
