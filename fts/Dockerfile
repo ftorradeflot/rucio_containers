@@ -5,7 +5,7 @@ RUN yum install -y epel-release.noarch
 RUN curl https://fts-repo.web.cern.ch/fts-repo/fts3-prod-el7.repo > /etc/yum.repos.d/fts3-prod-el7.repo
 RUN curl https://dmc-repo.web.cern.ch/dmc-repo/dmc-el7.repo > /etc/yum.repos.d/dmc-el7.repo
 RUN yum upgrade -y
-RUN yum install -y mysql multitail gfal2-plugin* fts-server fts-client fts-rest fts-monitoring fts-mysql fts-msg
+RUN yum --setopt=obsoletes=0 install -y mysql multitail gfal2-plugin* fts-server-3.9.5 fts-client-3.9.5 fts-rest-3.9.4 fts-monitoring-3.9.1 fts-mysql-3.9.5 fts-msg-3.9.5
 RUN yum clean all
 
 # Setup FTS security
