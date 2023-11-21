@@ -21,7 +21,7 @@
 # - Mayank Sharma <mayank.sharma@cern.ch>, 2021
 
 FROM centos:7
-ENV RUCIO_TAG=1.26.18
+ENV RUCIO_TAG=1.26_backwards
 
 WORKDIR /
 
@@ -38,7 +38,7 @@ RUN yum -y install epel-release && \
     yum clean all && \
     rm -rf /var/cache/yum
 
-ARG GIT_CLONE_ARGS="--depth 1 https://github.com/rucio/rucio.git"
+ARG GIT_CLONE_ARGS="--depth 1 https://github.com/ftorradeflot/rucio.git"
 
 RUN git clone $GIT_CLONE_ARGS --branch $RUCIO_TAG /tmp/rucio && rm -rf /tmp/rucio/.git
 
